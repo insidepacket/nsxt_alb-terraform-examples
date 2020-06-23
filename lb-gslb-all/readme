@@ -1,0 +1,22 @@
+The above example is based on the following environment:
+Two DCs: site01 and site02;
+There is a controller cluster in each site;
+Two GSLB sites configured: site01 is the leader site.
+Terraform v0.12
+NSX Advanced load balancer: v18.2.9.
+
+
+The Terraform plan will create the following resources:
+
+(1) Five web servers as a pool member in each DC;
+(2) Two local load balancing pools in each DC: the first 2 web servers are members of pool1 and the rest 3 web servers are members of pool2;
+(3) A pool group in each DC, which includes the above 2 pools: pool1 is In Service and pool2 is Out of Service
+(4) A virtual service in each DC to provide local load balancing
+(5) SSL profile in each DC to define how a SSL session is terminated on the NSX advanced load balancer;
+(6) HTTP Cookie-based persistence profile in each DC to offer web session persistence in the local load balancing;
+(7) Certificate and Key for the web application HTTPS service;
+(8) A HTTP health monitor in each DC to check the health of local load balancing pool members
+(9) Global load balancing PKI profile;
+(10) Global load balancing health monitor;
+(11) Global load balancing persistence profile;
+(12) Global load balancing service including site affinity;
