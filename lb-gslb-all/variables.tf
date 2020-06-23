@@ -1,8 +1,3 @@
-variable "avi_password" {
-  type    = string
-  default = "admin"
-}
-
 variable "site1controller" {
   type    = string
   default = "10.1.1.250"
