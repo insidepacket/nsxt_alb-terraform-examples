@@ -1,5 +1,7 @@
 # nsxt_alb-terraform-examples
 Terraform plan example for avinetwork load balancer automation.
 
-Terraform version 0.12
-Avi LB: v18.2.9
+terraform --version
+Terraform v0.12.26
+
+Avi Vantage: v18.2.9
