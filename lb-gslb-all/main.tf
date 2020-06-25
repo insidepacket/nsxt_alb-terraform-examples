@@ -1,4 +1,4 @@
-# For example, restrict template version in 0.1.x
+# This is based on Terraform v0.12 and Avi Vtange 18.2.9
 provider "avi" {
   avi_username = "admin"
   avi_tenant = "admin"
